@@ -1,0 +1,21 @@
+@import url("./vars.css");
+
+/* src/global.css */
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("../assets/fonts/roboto_flex.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  background-color: #131212;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
