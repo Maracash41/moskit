@@ -4,9 +4,6 @@
   height: 300px;
 }
 
-.headerContent {
-}
-
 .headerTop {
   display: flex;
   flex-direction: column;
@@ -49,18 +46,6 @@
 .headerContactsMessengers {
   display: flex;
   gap: 10px;
-}
-
-.messengersLink {
-  /* стили для messengersLink */
-}
-
-.messengersIcon {
-  /* стили для messengersIcon */
-}
-
-.headerContactsPhone {
-  /* стили для headerContactsPhone */
 }
 
 .phoneLink {
