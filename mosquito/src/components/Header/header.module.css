@@ -2,5 +2,75 @@
 .header {
   width: 100%;
   height: 300px;
+}
+
+.headerContent {
+}
+
+.headerTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+}
+
+.headerTopContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLogo {
+  display: flex;
+}
+
+.headerLogoLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImg {
+  width: 22px;
+  height: 41px;
+}
+
+.headerContacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactsText {
+  font-style: 1rem;
+  color: var(--header-text-color);
+}
+
+.headerContactsMessengers {
+  display: flex;
+  gap: 10px;
+}
+
+.messengersLink {
+  /* стили для messengersLink */
+}
+
+.messengersIcon {
+  /* стили для messengersIcon */
+}
+
+.headerContactsPhone {
+  /* стили для headerContactsPhone */
+}
+
+.phoneLink {
+  font-style: 1rem;
+  color: var(--header-text-color);
+}
+
+.headerBottom {
+  display: flex;
+  align-items: center;
+  height: 68px;
   background-color: var(--primary-color);
 }
