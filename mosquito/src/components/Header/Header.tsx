@@ -10,7 +10,7 @@ const Header: React.FC = () => {
       <header className={classes.header}>
         <div className={classes.headerContent}>
           <div className={classes.headerTop}>
-            <div className="container">
+            <div className={classes.container}>
               <div className={classes.headerTopContent}>
                 <div className={classes.headerLogo}>
                   <a href="/" className={classes.headerLogoLink}>
@@ -45,7 +45,30 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className={classes.headerBottom}>
-            <div className={classes.headerBottomContent}></div>
+            <div className={classes.container}>
+              <div className={classes.headerBottomContent}>
+                <nav className={classes.headerMenu}>
+                  <ul className={classes.headerMenuList}>
+                    <li className={classes.headerMenuItem}>
+                      <a href="!#" className={classes.headerMenuLink}>
+                        Виды сеток
+                      </a>
+                    </li>
+                    <li className={classes.headerMenuItem}>
+                      <a href="!#" className={classes.headerMenuLink}>
+                        Типы полотен
+                      </a>
+                    </li>
+                    <li className={classes.headerMenuItem}>
+                      <a href="!#" className={classes.headerMenuLink}>
+                        Наши работы
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <button className={classes.orderBtn}>Заказать</button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
