@@ -50,7 +50,7 @@
     transform: translateY(-50%);
     width: 1.5em;
     height: 1.5em;
-    background-image: url("../../assets/img/features_icon.svg"); /* Путь к вашей иконке */
+    background-image: url("./img/features_icon.svg"); /* Путь к вашей иконке */
     background-size: contain;
     background-repeat: no-repeat;
   }

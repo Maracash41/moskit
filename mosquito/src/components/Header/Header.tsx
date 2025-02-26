@@ -67,7 +67,7 @@ const Header: React.FC = () => {
                     </li>
                   </ul>
                 </nav>
-                <OrderButton>
+                <OrderButton />
               </div>
             </div>
           </div>

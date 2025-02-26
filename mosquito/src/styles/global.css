@@ -8,10 +8,17 @@
   font-style: normal;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--primary-font);
 }
 
+html,
 body,
 ul,
 li,
