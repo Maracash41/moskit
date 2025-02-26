@@ -15,7 +15,11 @@ body {
 body,
 ul,
 li,
-p {
+p,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
 }
@@ -32,4 +36,9 @@ ul {
 .container {
   width: 1160px;
   margin: 0 auto;
+}
+
+.sectionTitle {
+  color: var(--primary-color);
+  font-size: 2rem;
 }

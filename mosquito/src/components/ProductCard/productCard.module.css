@@ -1,0 +1,85 @@
+.productCard {
+  padding: 10px;
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.productCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.productCardFeatures {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.productCardFeaturesImgContainer {
+  max-width: 212px;
+}
+
+.productCardFeaturesImg {
+  max-width: 100%;
+}
+
+.productCardFeaturesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productCardFeaturesItem {
+  position: relative;
+  padding-left: 30px;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url("../../assets/img/features_icon.svg"); /* Путь к вашей иконке */
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.productCardHeading {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.productCardText {
+  margin-bottom: 10px;
+}
+
+.productCardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.productCardPriceHeading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.productCardPriceCost {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}

@@ -1,0 +1,10 @@
+.orderBtn {
+  width: 163px;
+  height: 46px;
+  background-color: var(--btn-background);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

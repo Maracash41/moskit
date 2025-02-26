@@ -31,6 +31,10 @@
   height: 41px;
 }
 
+.mainHeading {
+  font-size: 1.5rem;
+}
+
 .headerContacts {
   display: flex;
   align-items: center;
@@ -73,15 +77,4 @@
 
 .headerMenuLink {
   color: var(--secondary-color);
-}
-
-.orderBtn {
-  width: 163px;
-  height: 46px;
-  background-color: var(--btn-background);
-  color: var(--secondary-color);
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  cursor: pointer;
 }

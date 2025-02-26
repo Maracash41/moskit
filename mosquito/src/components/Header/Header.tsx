@@ -3,6 +3,7 @@ import classes from "./header.module.css";
 import logo from "../../assets/logo.svg";
 import tgIcon from "../../assets/tg_icon.svg";
 import whatsappIcon from "../../assets/whatsapp_icon.svg";
+import OrderButton from "../OrderButton/OrderButton";
 
 const Header: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Header: React.FC = () => {
                 <div className={classes.headerLogo}>
                   <a href="/" className={classes.headerLogoLink}>
                     <img src={logo} className={classes.logoImg} alt="лого" />
-                    АнтиПад.рф
+                    <h1 className={classes.mainHeading}>АнтиПад.рф</h1>
                   </a>
                 </div>
                 <div className={classes.headerContacts}>
@@ -66,7 +67,7 @@ const Header: React.FC = () => {
                     </li>
                   </ul>
                 </nav>
-                <button className={classes.orderBtn}>Заказать</button>
+                <OrderButton>
               </div>
             </div>
           </div>
