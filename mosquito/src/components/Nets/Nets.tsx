@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./nets.module.css";
 import ProductCard from "../ProductCard/ProductCard";
+import featuresImg1 from "../../assets/img/features_img_1.jpg";
 
 const Nets: React.FC = () => {
   return (
@@ -9,7 +10,18 @@ const Nets: React.FC = () => {
         <h2 className={classes.sectionTitle}>Варианты сеток</h2>
 
         <div className={classes.netsCards}>
-          <ProductCard />
+          <ProductCard
+            image={featuresImg1}
+            name="АнтиВандал"
+            description="Сочетает в себе все преимущества стандартной сетки, но имеет усиленные антивандальные крепления. Идеальный вариант для 1ых этажей"
+            price="от 500 руб м2"
+            features={[
+              "Простой уход",
+              "Надёжность",
+              "Усиленный профиль",
+              "Защищён от кражи",
+            ]}
+          />
         </div>
       </div>
     </section>
