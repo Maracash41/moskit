@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./nets.module.css";
 import ProductCard from "../ProductCard/ProductCard";
-import featuresImg1 from "../../assets/img/features_img_1.jpg";
+import featuresImg1 from "./img/features_img_1.jpg";
 
 const Nets: React.FC = () => {
   return (

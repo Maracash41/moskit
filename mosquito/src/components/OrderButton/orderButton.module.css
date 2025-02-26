@@ -2,9 +2,15 @@
   width: 163px;
   height: 46px;
   background-color: var(--btn-background);
+  border: 1px solid var(--btn-background);
   color: var(--secondary-color);
   border-radius: 10px;
-  outline: none;
-  border: none;
+
   cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    border: 1px solid var(--btn-background);
+    background-color: var(--btn-background-hover);
+  }
 }

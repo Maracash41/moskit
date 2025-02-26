@@ -1,0 +1,12 @@
+@import "../../styles/global.css";
+
+.netsTypes {
+  margin-bottom: 25px;
+}
+
+.netsTypesContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

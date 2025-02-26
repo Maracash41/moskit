@@ -46,6 +46,7 @@ ul {
 }
 
 .sectionTitle {
+  margin-bottom: 15px;
   color: var(--primary-color);
   font-size: 2rem;
 }
