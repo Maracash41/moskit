@@ -1,12 +1,18 @@
 @import "../../styles/global.css";
 
-.netsTypes {
+.netTypes {
   margin-bottom: 25px;
 }
 
-.netsTypesContent {
+.netTypesContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.netTypesCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }

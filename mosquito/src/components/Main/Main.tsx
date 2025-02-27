@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./main.module.css";
 import Banner from "../Banner/Banner";
 import Nets from "../Nets/Nets";
-import NetsTypes from "../NetsTypes/NetsTypes";
+import NetTypes from "../NetTypes/NetTypes";
 
 const Main: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Main: React.FC = () => {
           <Banner />
           <div className={classes.container}>
             <Nets />
-            <NetsTypes />
+            <NetTypes />
           </div>
         </div>
       </main>
