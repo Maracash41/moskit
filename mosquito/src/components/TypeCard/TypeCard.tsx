@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./typeCard.module.css";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import OrderButton from "../OrderButton/OrderButton";
 
 interface ITypeCard {
   name: string;
@@ -45,7 +46,8 @@ const TypeCard: React.FC<ITypeCard> = ({
             );
           })}
         </ul>
-        <p>{cost}</p>
+        <p className={classes.typeCardPrice}>Стоимость: {cost}</p>
+        <OrderButton clickBtn={() => console.log("click in TypeCard")} />
       </div>
     </div>
   );

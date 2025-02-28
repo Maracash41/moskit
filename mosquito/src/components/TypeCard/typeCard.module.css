@@ -1,0 +1,86 @@
+@import "../../styles/global.css";
+
+.typeCard {
+  padding: 10px;
+  max-width: 268px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.typeCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.typeCardImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  border: 5px solid var(--primary-color);
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.typeCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.typeCardHeading {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.typeCardSize {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.typeCardText {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.typeCardCharacteristics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.typeCardCharacteristic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.typeCardCharacteristicName {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.typeCardPrice {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
