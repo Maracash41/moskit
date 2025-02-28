@@ -1,7 +1,7 @@
 @import "../../styles/global.css";
 
 .netTypes {
-  margin-bottom: 25px;
+  background-color: var(--section-background);
 }
 
 .netTypesContent {
@@ -15,4 +15,5 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  width: 100%;
 }
