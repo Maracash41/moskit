@@ -4,7 +4,7 @@ import bannerImg from "../../assets/banner_img.png";
 
 const Banner: React.FC = () => {
   return (
-    <div className={classes.banner}>
+    <section className={classes.banner}>
       <div className={classes.container}>
         <div className={classes.bannerContent}>
           <div className={classes.bannerText}>
@@ -16,7 +16,7 @@ const Banner: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
