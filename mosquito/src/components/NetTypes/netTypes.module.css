@@ -1,6 +1,7 @@
 @import "../../styles/global.css";
 
 .netTypes {
+  padding: 10px;
   background-color: var(--section-background);
 }
 
