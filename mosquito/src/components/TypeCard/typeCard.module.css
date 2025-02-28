@@ -2,7 +2,6 @@
 
 .typeCard {
   padding: 10px;
-  max-width: 268px;
   background-color: var(--secondary-color);
   border-radius: 10px;
 }

@@ -1,7 +1,9 @@
 @import "../../styles/global.css";
 
 .nets {
-  margin-bottom: 25px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--section-background);
 }
 
 .netsContent {
