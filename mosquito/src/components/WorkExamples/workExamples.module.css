@@ -1,8 +1,15 @@
 @import "../../styles/global.css";
 
+.workExamples {
+  width: 100%;
+  background-color: var(--section-background);
+}
+
 .workExamplesContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  padding: 10px;
 }
