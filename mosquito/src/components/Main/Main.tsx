@@ -6,6 +6,7 @@ import NetTypes from "../NetTypes/NetTypes";
 
 import furnituraImg from "./img/banner_furnitura.png";
 import ramkiImg from "./img/banner_ramki.jpg";
+import WorkExamples from "../WorkExamples/WorkExamples";
 
 const Main: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const Main: React.FC = () => {
                 "Мы предлагаем 3 стандартных цвета, а так же можем окрасить в любой цвет "
               }
             />
+            <WorkExamples />
           </div>
         </div>
       </main>

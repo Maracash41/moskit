@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./header.module.css";
-import logo from "../../assets/logo.svg";
-import tgIcon from "../../assets/tg_icon.svg";
-import whatsappIcon from "../../assets/whatsapp_icon.svg";
+import logo from "./img/logo.svg";
+import tgIcon from "./img/tg_icon.svg";
+import whatsappIcon from "./img/whatsapp_icon.svg";
 import OrderButton from "../OrderButton/OrderButton";
 
 const Header: React.FC = () => {
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
                     </li>
                   </ul>
                 </nav>
-                <OrderButton />
+                <OrderButton clickBtn={() => console.log("Click in Header")} />
               </div>
             </div>
           </div>
