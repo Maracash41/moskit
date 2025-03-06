@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./header.module.css";
 import logo from "./img/logo.svg";
 import tgIcon from "./img/tg_icon.svg";
 import whatsappIcon from "./img/whatsapp_icon.svg";
 import OrderButton from "../OrderButton/OrderButton";
+import Modal from "../Modal/Modal";
 
 const Header: React.FC = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const switchModal = () => {
+    setModalIsOpen((current) => !current);
+  };
   return (
     <>
       <header className={classes.header}>
@@ -37,8 +42,8 @@ const Header: React.FC = () => {
                     </a>
                   </div>
                   <div className={classes.headerContactsPhone}>
-                    <a href="tel:+79999999999" className={classes.phoneLink}>
-                      +7 (999) 999-99-99
+                    <a href="tel:+79219118317" className={classes.phoneLink}>
+                      +7 (921) 911-83-17
                     </a>
                   </div>
                 </div>
@@ -67,12 +72,13 @@ const Header: React.FC = () => {
                     </li>
                   </ul>
                 </nav>
-                <OrderButton clickBtn={() => console.log("Click in Header")} />
+                <OrderButton clickBtn={() => switchModal()} />
               </div>
             </div>
           </div>
         </div>
       </header>
+      <Modal modalIsOpen={modalIsOpen} closeModal={switchModal} />
     </>
   );
 };
