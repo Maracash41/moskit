@@ -4,13 +4,8 @@ import logo from "./img/logo.svg";
 import tgIcon from "./img/tg_icon.svg";
 import whatsappIcon from "./img/whatsapp_icon.svg";
 import OrderButton from "../OrderButton/OrderButton";
-import Modal from "../Modal/Modal";
 
 const Header: React.FC = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const switchModal = () => {
-    setModalIsOpen((current) => !current);
-  };
   return (
     <>
       <header className={classes.header}>
@@ -72,13 +67,12 @@ const Header: React.FC = () => {
                     </li>
                   </ul>
                 </nav>
-                <OrderButton clickBtn={() => switchModal()} />
+                <OrderButton />
               </div>
             </div>
           </div>
         </div>
       </header>
-      <Modal modalIsOpen={modalIsOpen} closeModal={switchModal} />
     </>
   );
 };

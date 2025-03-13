@@ -1,12 +1,11 @@
 import React from "react";
 import classes from "./orderButton.module.css";
-interface IOrderButton {
-  clickBtn: () => void;
-}
+import { useModal } from "../utils/ModalProvider";
 
-const OrderButton: React.FC<IOrderButton> = ({ clickBtn }) => {
+const OrderButton = () => {
+  const { openModal } = useModal();
   return (
-    <button className={classes.orderBtn} onClick={clickBtn}>
+    <button className={classes.orderBtn} onClick={openModal}>
       Заказать
     </button>
   );
