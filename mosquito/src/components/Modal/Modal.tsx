@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import classes from "./modal.module.css";
 import { useModal } from "../utils/ModalProvider";
 
@@ -7,6 +7,7 @@ const Modal = () => {
     useModal();
 
   const [error, setError] = useState("");
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,9 +18,14 @@ const Modal = () => {
     closeModal();
   };
 
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+      closeModal();
+    }
+  };
   return isOpenModal ? (
-    <div className={classes.modal}>
-      <div className={classes.modalContent}>
+    <div className={classes.modal} onClick={handleOutsideClick}>
+      <div className={classes.modalContent} ref={modalRef}>
         <div className={classes.numberContainer}>
           <form className={classes.formPhone} onSubmit={handleSubmit}>
             <label className={classes.numberLabel}>
