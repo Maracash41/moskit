@@ -12,7 +12,7 @@ const Modal = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!phoneNumber) {
-      setError("Введите номер телефона");
+      setError("*Введите номер телефона в любом числовом формате");
       return;
     }
     closeModal();
@@ -26,26 +26,24 @@ const Modal = () => {
   return isOpenModal ? (
     <div className={classes.modal} onClick={handleOutsideClick}>
       <div className={classes.modalContent} ref={modalRef}>
-        <div className={classes.numberContainer}>
-          <form className={classes.formPhone} onSubmit={handleSubmit}>
-            <label className={classes.numberLabel}>
-              Ваш телефон
-              <input
-                type="tel"
-                className={classes.numberField}
-                value={phoneNumber}
-                placeholder="Введите номер телефона"
-                onChange={(e) => handlePhoneNumberChange(e.target.value)}
-              />
-            </label>
-            {error && <p className={classes.errorPhoneMsg}>{error}</p>}
-            <button type="submit" className={classes.formPhoneSubmitBtn}>
-              Отправить
-            </button>
-          </form>
-        </div>
+        <form className={classes.formPhone} onSubmit={handleSubmit}>
+          <input
+            type="tel"
+            className={classes.numberField}
+            value={phoneNumber}
+            placeholder="+7-999-99-99"
+            onChange={(e) => handlePhoneNumberChange(e.target.value)}
+          />
+
+          <button type="submit" className={classes.formPhoneSubmitBtn}>
+            Отправить
+          </button>
+        </form>
+        {error && <p className={classes.errorPhoneMsg}>{error}</p>}
+        <button onClick={closeModal} className={classes.closeBtn}>
+          закрыть
+        </button>
       </div>
-      <button onClick={closeModal}>Закрыть</button>
     </div>
   ) : null;
 };

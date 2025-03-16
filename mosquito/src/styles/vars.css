@@ -10,4 +10,9 @@
   --btn-background-hover: #8adc43;
   --progress-bar-background: #e9e9e9;
   --progress-bar-cell-background: #234888;
+  --number-field-border-color: #4c78c4;
+  --number-field-border-color-focus: #234888;
+  --number-field-placeholder-color: #94bbff;
+  --close-btn-icon-color: #94bbff;
+  --close-btn-icon-color-hover: #234888;
 }

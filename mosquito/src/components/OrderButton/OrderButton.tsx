@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./orderButton.module.css";
 import { useModal } from "../utils/ModalProvider";
 

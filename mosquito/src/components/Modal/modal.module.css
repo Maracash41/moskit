@@ -11,12 +11,71 @@
 }
 
 .modalContent {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 10px;
-  max-width: 300px;
+  padding: 30px 10px 10px 10px;
+
   border-radius: 5px;
   background-color: #ffffff;
+}
+
+.formPhone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.numberField {
+  height: 50px;
+  font-size: 2rem;
+  border: 2px solid var(--number-field-border-color);
+  outline: none;
+  border-radius: 10px;
+  color: var(--primary-color);
+
+  &:focus {
+    border-color: var(--number-field-border-color-focus);
+  }
+
+  &::placeholder {
+    color: var(--number-field-placeholder-color);
+  }
+}
+
+.formPhoneSubmitBtn {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--close-btn-icon-color);
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--close-btn-icon-color-hover);
+  }
+}
+
+.errorPhoneMsg {
+  font-size: 0.9rem;
+  color: var(--primary-color);
 }
