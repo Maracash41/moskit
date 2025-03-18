@@ -12,17 +12,28 @@ const Modal = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!phoneNumber) {
-      setError("*Введите номер телефона в любом числовом формате");
+      setError("*Введите номер телефона!");
       return;
     }
-    closeModal();
+    const phoneRegex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    if (!phoneRegex.test(phoneNumber)) {
+      setError("Неверный формат номера телефона.");
+      return;
+    }
+    close();
   };
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-      closeModal();
+      close();
     }
   };
+
+  const close = () => {
+    setError("");
+    closeModal();
+  };
+
   return isOpenModal ? (
     <div className={classes.modal} onClick={handleOutsideClick}>
       <div className={classes.modalContent} ref={modalRef}>
@@ -40,7 +51,7 @@ const Modal = () => {
           </button>
         </form>
         {error && <p className={classes.errorPhoneMsg}>{error}</p>}
-        <button onClick={closeModal} className={classes.closeBtn}>
+        <button onClick={close} className={classes.closeBtn}>
           закрыть
         </button>
       </div>

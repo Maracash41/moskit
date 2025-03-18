@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./header.module.css";
 import logo from "./img/logo.svg";
 import tgIcon from "./img/tg_icon.svg";
