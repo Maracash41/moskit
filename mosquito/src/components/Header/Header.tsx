@@ -23,16 +23,24 @@ const Header: React.FC = () => {
                   <p className={classes.contactsText}>Написать на в:</p>
 
                   <div className={classes.headerContactsMessengers}>
-                    <a href="" className={classes.messengersLink}>
+                    <a
+                      href="https://t.me/+79219118311"
+                      className={classes.messengersLink}
+                    >
                       <img
                         src={tgIcon}
                         className={classes.messengersIcon}
+                        alt="telegram"
                       ></img>
                     </a>
-                    <a href="" className={classes.messengersLink}>
+                    <a
+                      href="https://wa.me/79219118317"
+                      className={classes.messengersLink}
+                    >
                       <img
                         src={whatsappIcon}
                         className={classes.messengersIcon}
+                        alt="whatsapp"
                       ></img>
                     </a>
                   </div>
