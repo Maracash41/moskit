@@ -3,6 +3,11 @@
   width: 100%;
 }
 
+.headerContent {
+  display: flex;
+  flex-direction: column;
+}
+
 .headerTop {
   display: flex;
   flex-direction: column;
