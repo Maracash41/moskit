@@ -56,6 +56,15 @@ const Header: React.FC = () => {
           <div className={classes.headerBottom}>
             <div className={classes.container}>
               <div className={classes.headerBottomContent}>
+                <input
+                  type="checkbox"
+                  className={classes.burgerCheckbox}
+                  id="burgerCheckbox"
+                />
+                <label
+                  htmlFor="burgerCheckbox"
+                  className={classes.burgerIcon}
+                ></label>
                 <nav className={classes.headerMenu}>
                   <ul className={classes.headerMenuList}>
                     <li className={classes.headerMenuItem}>

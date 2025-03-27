@@ -1,6 +1,7 @@
 :root {
   --primary-color: #234888;
   --secondary-color: #ffffff;
+  --secondary-color-opacity: #ffffff40;
   --text-color: #000000;
   --section-background: #d3dce0;
   --header-text-color: #646464;
