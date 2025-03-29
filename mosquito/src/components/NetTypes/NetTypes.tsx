@@ -8,7 +8,7 @@ import img4 from "./img/setka_antipil.jpg";
 
 const NetTypes: React.FC = () => {
   return (
-    <section className={classes.netTypes}>
+    <section className={classes.netTypes} id="netsTypes">
       <div className={classes.container}>
         <div className={classes.netTypesContent}>
           <h2 className={classes.sectionTitle}>Типы Полотен</h2>

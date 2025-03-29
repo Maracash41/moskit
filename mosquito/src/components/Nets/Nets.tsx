@@ -5,7 +5,7 @@ import featuresImg1 from "./img/features_img_1.jpg";
 
 const Nets: React.FC = () => {
   return (
-    <section className={classes.nets}>
+    <section className={classes.nets} id="nets">
       <div className={classes.container}>
         <div className={classes.netsContent}>
           <h2 className={classes.sectionTitle}>Варианты сеток</h2>

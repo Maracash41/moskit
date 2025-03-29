@@ -68,17 +68,20 @@ const Header: React.FC = () => {
                 <nav className={classes.headerMenu}>
                   <ul className={classes.headerMenuList}>
                     <li className={classes.headerMenuItem}>
-                      <a href="!#" className={classes.headerMenuLink}>
+                      <a href="#nets" className={classes.headerMenuLink}>
                         Виды сеток
                       </a>
                     </li>
                     <li className={classes.headerMenuItem}>
-                      <a href="!#" className={classes.headerMenuLink}>
+                      <a href="#netsTypes" className={classes.headerMenuLink}>
                         Типы полотен
                       </a>
                     </li>
                     <li className={classes.headerMenuItem}>
-                      <a href="!#" className={classes.headerMenuLink}>
+                      <a
+                        href="#workExamples"
+                        className={classes.headerMenuLink}
+                      >
                         Наши работы
                       </a>
                     </li>

@@ -9,7 +9,7 @@ import galleryImg5 from "./img/gallery_5.jpg";
 
 const WorkExamples: React.FC = () => {
   return (
-    <section className={classes.workExamples}>
+    <section className={classes.workExamples} id="workExamples">
       <div className={classes.container}>
         <div className={classes.workExamplesContent}>
           <h2 className={classes.sectionTitle}>Примеры Работ</h2>
