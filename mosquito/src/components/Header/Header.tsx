@@ -83,7 +83,9 @@ const Header: React.FC = () => {
               <div className={classes.headerBottomContent}>
                 <div className={classes.burger}></div>
                 <button
-                  className={classes.burgerIcon}
+                  className={`${classes.burgerIcon} ${
+                    isBurgerOpen ? classes.burgerIconActive : ""
+                  }`}
                   onClick={toggleBurgerMenu}
                 ></button>
                 <nav
