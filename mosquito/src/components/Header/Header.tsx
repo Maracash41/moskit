@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import classes from "./header.module.css";
 import logo from "./img/logo.svg";
 import tgIcon from "./img/tg_icon.svg";
@@ -6,6 +6,31 @@ import whatsappIcon from "./img/whatsapp_icon.svg";
 import OrderButton from "../OrderButton/OrderButton";
 
 const Header: React.FC = () => {
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const menuRef = useRef<HTMLUListElement | null>(null);
+
+  const toggleBurgerMenu = () => {
+    setIsBurgerOpen(!isBurgerOpen);
+  };
+
+  const outsideClickHandler = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(target) &&
+      !target.closest(`.${classes.burgerIcon}`)
+    ) {
+      setIsBurgerOpen(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("mousedown", outsideClickHandler);
+    return () => {
+      document.removeEventListener("mousedown", outsideClickHandler);
+    };
+  }, []);
+
   return (
     <>
       <header className={classes.header}>
@@ -56,17 +81,17 @@ const Header: React.FC = () => {
           <div className={classes.headerBottom}>
             <div className={classes.container}>
               <div className={classes.headerBottomContent}>
-                <input
-                  type="checkbox"
-                  className={classes.burgerCheckbox}
-                  id="burgerCheckbox"
-                />
-                <label
-                  htmlFor="burgerCheckbox"
+                <div className={classes.burger}></div>
+                <button
                   className={classes.burgerIcon}
-                ></label>
-                <nav className={classes.headerMenu}>
-                  <ul className={classes.headerMenuList}>
+                  onClick={toggleBurgerMenu}
+                ></button>
+                <nav
+                  className={`${classes.headerMenu} ${
+                    isBurgerOpen ? classes.headerMenuActive : ""
+                  }`}
+                >
+                  <ul className={classes.headerMenuList} ref={menuRef}>
                     <li className={classes.headerMenuItem}>
                       <a href="#nets" className={classes.headerMenuLink}>
                         Виды сеток
