@@ -29,6 +29,7 @@
 }
 
 .numberField {
+  max-width: 100%;
   height: 50px;
   font-size: 2rem;
   border: 2px solid var(--number-field-border-color);
@@ -84,4 +85,14 @@
 .errorPhoneMsg {
   font-size: 0.9rem;
   color: var(--primary-color);
+}
+
+@media screen and (max-width: 630px) {
+  .modalContent {
+    max-width: 80%;
+  }
+
+  .formPhone {
+    flex-direction: column;
+  }
 }

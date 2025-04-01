@@ -45,7 +45,7 @@ const Header: React.FC = () => {
                   </a>
                 </div>
                 <div className={classes.headerContacts}>
-                  <p className={classes.contactsText}>Написать на в:</p>
+                  <p className={classes.contactsText}>Написать нам в:</p>
 
                   <div className={classes.headerContactsMessengers}>
                     <a

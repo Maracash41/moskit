@@ -19,3 +19,19 @@
 .bannerImg {
   max-width: 100%;
 }
+
+@media screen and (max-width: 550px) {
+  .bannerText {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bannerContent {
+    flex-direction: column;
+  }
+
+  .bannerText {
+    text-align: center;
+  }
+}

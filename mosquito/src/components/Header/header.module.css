@@ -142,6 +142,12 @@
   transition: bottom 0.3s, transform 0.3s 0.15s;
 }
 
+@media screen and (max-width: 688px) {
+  .contactsText {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 618px) {
   .headerBottomContent {
     position: relative;
@@ -153,7 +159,7 @@
     left: 0;
     padding: 45px 10px 10px 10px;
     width: 250px;
-    transform: translateX(-100%);
+    transform: translateX(-150%);
     background: var(--primary-color);
     z-index: 2;
     transition: transform 0.3s;
@@ -169,6 +175,25 @@
   }
 
   .headerMenuActive {
-    transform: translateX(0);
+    transform: translateX(-5%);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logoImg {
+    width: 16px;
+    height: 35px;
+  }
+
+  .mainHeading {
+    font-size: 1rem;
+  }
+
+  .messengersIcon {
+    max-width: 30px;
+  }
+
+  .headerContacts {
+    flex-direction: column;
   }
 }

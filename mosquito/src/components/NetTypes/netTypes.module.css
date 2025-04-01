@@ -18,3 +18,15 @@
   gap: 10px;
   width: 100%;
 }
+
+@media screen and (max-width: 890px) {
+  .netTypesCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .netTypesCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

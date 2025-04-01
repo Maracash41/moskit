@@ -40,3 +40,13 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 450px) {
+  .mainImageContainer {
+    height: 300px;
+  }
+
+  .previewImagesContainer {
+    height: 45px;
+  }
+}
