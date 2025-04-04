@@ -22,7 +22,7 @@ const Modal = () => {
     }
 
     try {
-      const response = await fetch("антипад.рф/scripts/send_email.php", {
+      const response = await fetch("/scripts/send_email.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
