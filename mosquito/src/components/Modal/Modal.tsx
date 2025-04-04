@@ -9,7 +9,7 @@ const Modal = () => {
   const [error, setError] = useState("");
   const modalRef = useRef<HTMLDivElement | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!phoneNumber) {
       setError("*Введите номер телефона!");
@@ -20,7 +20,25 @@ const Modal = () => {
       setError("Неверный формат номера телефона.");
       return;
     }
-    close();
+
+    try {
+      const response = await fetch("антипад.рф/scripts/send_email.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ phoneNumber }).toString(),
+      });
+
+      const data = await response.json();
+
+      if (data.status === "error") {
+        throw new Error(data.message);
+      }
+      close();
+    } catch (e) {
+      setError("Не удалось отправить номер телефона. Попробуйте еще раз.");
+    }
   };
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
