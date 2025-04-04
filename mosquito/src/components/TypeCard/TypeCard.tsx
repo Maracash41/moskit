@@ -47,7 +47,7 @@ const TypeCard: React.FC<ITypeCard> = ({
           })}
         </ul>
         <p className={classes.typeCardPrice}>Стоимость: {cost}</p>
-        <OrderButton clickBtn={() => console.log("click in TypeCard")} />
+        <OrderButton />
       </div>
     </div>
   );

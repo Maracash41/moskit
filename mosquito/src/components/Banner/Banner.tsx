@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./banner.module.css";
-import bannerImg from "../../assets/banner_img.png";
 
 interface IBanner {
   image: string;
