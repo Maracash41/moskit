@@ -55,6 +55,7 @@ const Modal = () => {
   return isOpenModal ? (
     <div className={classes.modal} onClick={handleOutsideClick}>
       <div className={classes.modalContent} ref={modalRef}>
+        
         <form className={classes.formPhone} onSubmit={handleSubmit}>
           <input
             type="tel"
